@@ -1,0 +1,29 @@
+properties([
+    parameters([
+        string(
+            defaultValue: '', 
+            description: 'Branch to copy artifacts from-', 
+            name: 'BRANCH_NAME', 
+            trim: false
+        ),
+        string(
+            defaultValue: '', 
+            description: 'Build number', 
+            name: 'BUILD_NUMBER', 
+            trim: false
+        )]
+    )]
+) 
+
+node('boldAbode') {
+    catchError {
+        deleteDir()
+        copyArtifacts(
+            projectName: "boldAbode-build/${BRANCH_NAME}",
+            selector: specific("${BUILD_NUMBER}")
+        )
+        stage('deploy') {
+            sh 'tar -xf build/*.tgz'
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '~antd/dist/antd.css';
+
+.ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner:after {
+  -webkit-animation-name: none;
+          animation-name: none;
+  border-color: black;
+}
+
+html, body {
+    height: 100%;
+}
+
+.header-container {
+    .header {
+
+    }
+}
+
+.content-container {
+    .content {
+        height: 100%;
+    }
+}
+
+.footer-container { 
+    height: 100px; 
+    width: 100%; 
+    position: fixed;
+    bottom: 0px;
+
+    .footer {
+        height: 100%; 
+        width: 100%; 
+    }
+}
+
+#assessmentList > .ant-card-body {
+    padding: 20px 0px 0px 0px
+}
+
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255,255,255,.2);  
+  margin: 0px 0px 0px 25px;
+  float: left;
+}
+
+.form-title-card > .ant-card-body {
+  padding: 5px !important
+}
+
+.ant-form-item-label {
+  text-align: left !important
+}
+
+
+

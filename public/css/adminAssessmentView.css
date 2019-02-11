@@ -1,0 +1,48 @@
+.ant-checkbox-disabled + span {
+    color: rgb(4, 4, 28);
+}
+
+.ant-input-disabled:disabled {
+    background-color: #f1f1f1d6;
+    color: rgb(4, 4, 28);
+}
+
+.ant-select-disabled .ant-select-selection {
+    color: rgb(4, 4, 28);
+}
+
+/* TEXTAREA and confirm other fields
+
+.ant-select-selection__rendered {
+    background-color: #f1f1f1d6;
+    color: rgb(4, 4, 28);
+}
+
+.ant-checkbox-disabled .ant-checkbox-inner {
+    background-color: #f1f1f1d6;
+}
+
+input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="radio"].disabled, input[type="checkbox"].disabled {
+    background-color: #f1f1f1d6;
+    color: rgb(4, 4, 28);
+}
+
+ant-checkbox ant-checkbox-checked ant-checkbox-disabled {
+    background-color: #f1f1f1d6;
+    color: rgb(4, 4, 28);
+}
+*/
+
+.viewOnlyCheckbox * {
+    background-color: black !important;
+}
+
+::disabled {
+  background: #1890ff;
+  color: #fff !important;
+}
+
+.ant-checkbox-disabled + span {
+  color: black !important;
+  cursor: not-allowed;
+}
