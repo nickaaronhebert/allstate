@@ -19,7 +19,7 @@ node('boldAbode') {
     catchError {
         deleteDir()
         copyArtifacts(
-            projectName: "boldAbode-build/${BRANCH_NAME}",
+            projectName: "allstate-build/${BRANCH_NAME}",
             selector: specific("${BUILD_NUMBER}")
         )
         stage('deploy') {

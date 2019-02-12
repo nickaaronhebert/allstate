@@ -1,6 +1,6 @@
-def repoName = 'git@github.com:nickaaronhebert/boldAbode-frontend.git'
+def repoName = 'git@github.com:nickaaronhebert/allstate.git'
 def repoCreds = 'jenkins'
-def projectName = 'boldAbode-build'
+def projectName = 'allstate-build'
 
 node {
     catchError {
@@ -40,9 +40,9 @@ node {
         archiveArtifacts artifacts: 'build/*.tgz'
     }
     stage('auto-deploy') {
-        if (env.BRANCH_NAME == 'development' && currentBuild.currentResult == 'SUCCESS') {
-            build job: 'boldAbode-deploy', parameters: [[
-                $class: 'StringParameterValue', name: 'BRANCH_NAME', value: 'development'
+        if (env.BRANCH_NAME == 'master' && currentBuild.currentResult == 'SUCCESS') {
+            build job: 'allstate-deploy', parameters: [[
+                $class: 'StringParameterValue', name: 'BRANCH_NAME', value: 'master'
             ],[
                 $class: 'StringParameterValue', name: 'BUILD_NUMBER', value: currentBuild.id
             ]]
