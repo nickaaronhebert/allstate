@@ -81,6 +81,10 @@ class External extends Component {
     );
   }
 
+  handleClick(e) {
+    this.props.navigateToRoute({to: e.key, replace: false});
+  }
+
   render () {
     return (
       <div style={{ height: '100%' }}>
@@ -100,11 +104,11 @@ class External extends Component {
                     
                   </Col>
                   <Col span={10}>
-                    <Menu mode='horizontal'>
-                      <Menu.Item style={{fontWeight: '600', fontSize: '12px'}}>About Us</Menu.Item>
-                      <Menu.Item style={{fontWeight: '600', fontSize: '12px'}}>Contact Us</Menu.Item>
-                      <Menu.Item style={{fontWeight: '600', fontSize: '12px'}}>Request An Inspection</Menu.Item>
-                      <Menu.Item style={{fontWeight: '600', fontSize: '12px'}}>Tools and Resources</Menu.Item>
+                    <Menu mode='horizontal' onClick={(e) => {this.handleClick(e);}}>
+                      <Menu.Item key='about' style={{fontWeight: '600', fontSize: '12px'}}>About Us</Menu.Item>
+                      <Menu.Item key='contact' style={{fontWeight: '600', fontSize: '12px'}}>Contact Us</Menu.Item>
+                      <Menu.Item key='request' style={{fontWeight: '600', fontSize: '12px'}}>Request An Inspection</Menu.Item>
+                      <Menu.Item key='tools' style={{fontWeight: '600', fontSize: '12px'}}>Tools and Resources</Menu.Item>
                     </Menu>
                   </Col>
                   <Col span={4}>
@@ -120,10 +124,10 @@ class External extends Component {
                     <img onClick={() => {this.props.navigateToRoute({ to: '/', replace: false });}} src={AllStateLogo} style={{width: '180px', height: '100px', cursor: 'pointer'}}/>
                   </Col>
                   <Col span={14}>
-                    <Menu mode='horizontal' className='secondaryNavBar'>
-                      <Menu.Item style={{fontWeight: '600'}}>Real Estate Professionals</Menu.Item>
-                      <Menu.Item style={{fontWeight: '600'}}>Home Buyers & Sellers</Menu.Item>
-                      <Menu.Item style={{fontWeight: '600'}}>Our Services</Menu.Item>
+                    <Menu mode='horizontal' className='secondaryNavBar' onClick={(e) => {this.handleClick(e);}}>
+                      <Menu.Item key='realestate' style={{fontWeight: '600'}}>Real Estate Professionals</Menu.Item>
+                      <Menu.Item key='homeowner' style={{fontWeight: '600'}}>Home Buyers & Sellers</Menu.Item>
+                      <Menu.Item key='homeowner' style={{fontWeight: '600'}}>Our Services</Menu.Item>
                     </Menu>
                   </Col>
                 </Row>

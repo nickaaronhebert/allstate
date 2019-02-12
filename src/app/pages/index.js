@@ -1,4 +1,3 @@
-export { default as Home } from './home';
 export { default as Login } from './login';
 export { default as Register } from './register';
 export { default as Logout } from './logout';
@@ -17,6 +16,19 @@ export { default as DecoratorClientOrders } from './decoratorClientOrders';
 export { default as Validate } from './validate';
 export { default as SignupResult } from './signupResult';
 export { default as Profile } from './profile';
+
+
+
+export { default as Home } from './home';
+export { default as RealEstate } from './realEstate';
+export { default as Homeowner } from './homeowner';
+export { default as About } from './about';
+export { default as Contact } from './contact';
+export { default as Request } from './request';
+export { default as Tools } from './tools';
+
+
+
 
 
 

@@ -2,9 +2,6 @@ import React, { Component} from 'react';
 import { Switch, Route } from 'react-router-dom';
 import RouteWrapperData from './base-routes-wrapper-data';
 import * as pages from '../app/pages';
-import Logic from '../logic';
-
-const { SESSION_VALIDATE_EMAIL } = Logic.session.actions;
 
 export default class BaseUnuthenticatedRoutes extends Component {
   constructor (props) {
@@ -31,58 +28,61 @@ export default class BaseUnuthenticatedRoutes extends Component {
         />
         <RouteWrapperData
           exact
-          path='/serverIsNotAvailable'
-          component={pages.ActivationServerIsNotAvailable}
-          key={'not-available-'}
-          dataActions={[
-          ]}
-        />
-        <RouteWrapperData
-          exact
-          path='/login'
-          component={pages.Login}
-          key={'login'}
-          routeId='LOGIN'
-          dataActions={[
-          ]}
-        />
-        <RouteWrapperData
-          exact
-          path='/register'
-          component={pages.Register}
-          key={'register'}
-          routeId='REGISTER'
-          dataActions={[
-          ]}
-        />
-        <RouteWrapperData
-          exact
-          path='/loggedOut'
-          component={pages.Logout}
-          routeId='LOG_OUT'
+          path='/realestate'
+          component={pages.RealEstate}
+          routeId='REAL-ESTATE'
           session={session}
-          key={'logout'}
+          key={'real-estate'}
           dataActions={[
           ]}
         />
         <RouteWrapperData
           exact
-          path='/validate'
-          component={pages.Validate}
-          routeId='VALIDATE-EMAIL'
-          session={session}
-          key={'validate-email'}
-          dataActions={[
-            { type: SESSION_VALIDATE_EMAIL, payload: {  } }
-          ]}
-        />
-        <RouteWrapperData
-          exact
-          path='/signup/:result'
-          component={pages.SignupResult}
+          path='/homeowner'
+          component={pages.Homeowner}
           routeId='SIGNUP-RESULT'
           session={session}
-          key={'signup-result'}
+          key={'homeowner'}
+          dataActions={[
+          ]}
+        />
+        <RouteWrapperData
+          exact
+          path='/about'
+          component={pages.About}
+          routeId='SIGNUP-RESULT'
+          session={session}
+          key={'about'}
+          dataActions={[
+          ]}
+        />
+        <RouteWrapperData
+          exact
+          path='/contact'
+          component={pages.Contact}
+          routeId='SIGNUP-RESULT'
+          session={session}
+          key={'contact'}
+          dataActions={[
+          ]}
+        />
+        <RouteWrapperData
+          exact
+          path='/request'
+          component={pages.Request}
+          routeId='SIGNUP-RESULT'
+          session={session}
+          key={'request'}
+          dataActions={[
+          ]}
+        />
+        <RouteWrapperData
+          exact
+          path='/tools'
+          component={pages.Contact}
+          routeId='SIGNUP-RESULT'
+          session={session}
+          key={'tools'}
           dataActions={[
           ]}
         />
